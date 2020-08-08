@@ -141,7 +141,7 @@ body{
   background-color: rgba(#000,0.8);
   
   // transition:height 2s ease-in-out;
-  transition: width 3s, height 3s;
+  transition: width 2s, height 2s;
   text-align:center;
   border-radius: 1rem;
   & span{
@@ -153,7 +153,7 @@ body{
 }
 
 .animate{
-  animation: slideIn 1.5s ease-in-out 3s forwards;
+  animation: slideIn 1s ease-in-out 0s forwards;
     @keyframes slideIn {
       50%{
         opacity: 0.5;
