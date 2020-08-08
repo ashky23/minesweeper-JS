@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       gameDiv.style.width = setWidth;
       gameDiv.style.height = setHeight;
       gameDiv.children[0].innerText =
-        "🥇🥇🎉 Hurrrraayyy!! 🎉🥇🥇🎉 \nPlay again 🔥";
+        "🥇🥇🎉 Hurrrraayyy!! 🎉🥇🥇 \nPlay again 🔥";
       gameDiv.children[0].classList.add("animate");
     }
   }
