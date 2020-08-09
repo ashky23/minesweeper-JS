@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let deviceWidth = window.innerWidth > 0 ? window.innerWidth : screen.width;
   let setWidth = deviceWidth > 850 ? "600px" : "350px";
   let setHeight = deviceWidth > 850 ? "200px" : "120px";
+
   // console.log(window.innerWidth +" : "+ screen.width);
   let bombCount = 30;
   let flags = 0;
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let flagsLeft = document.querySelector("#flags-left");
   // flagsLeft.innerText=setWidth;
   let isGameOver = false;
+
   // function to create minsweeper board
   function createBoard() {
     const bombsArr = Array(bombCount).fill("bomb");
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     // console.log(emptyArr);
 
     const gameArray = emptyArr.concat(bombsArr);
-    const shuffledArray = gameArray.sort(() => Math.random() - 0.5); 
+    const shuffledArray = gameArray.sort(() => Math.random() - 0.5);
     // console.log(gameArray);
     for (let i = 0; i < width * width; i++) {
       let square = document.createElement("div");

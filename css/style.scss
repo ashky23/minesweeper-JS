@@ -1,43 +1,39 @@
 // @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:700';
-*{
+* {
   margin: 0;
   padding: 0;
   // box-sizing: border-box;
-} 
+}
 @mixin shadow {
-  box-shadow: -6px -6px 9px #fff,6px 6px 9px rgba(#000,0.5);
+  box-shadow: -6px -6px 9px #fff, 6px 6px 9px rgba(#000, 0.5);
 }
 @mixin inset-shadow {
-  box-shadow: inset -1px -1px 9px #fff, inset 6px 6px 9px rgba(#000,0.5);
+  box-shadow: inset -1px -1px 9px #fff, inset 6px 6px 9px rgba(#000, 0.5);
 }
 
-@mixin button-out
-{
-	background: #c0c0c0;
-	border: 2px solid black;
-	border-top-color: #fff;
-	border-left-color: #fff;
-	border-right-color: #808080;
+@mixin button-out {
+  background: #c0c0c0;
+  border: 2px solid black;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #808080;
   border-bottom-color: #808080;
 }
 
-@mixin button-in
-{  
+@mixin button-in {
   background: #a1adb0 !important;
-	border: 2px solid black !important;
-	border-bottom-color: #fff !important;
-	border-right-color: #fff !important;
-	border-left-color: #808080 !important;
-	border-top-color: #808080 !important;
+  border: 2px solid black !important;
+  border-bottom-color: #fff !important;
+  border-right-color: #fff !important;
+  border-left-color: #808080 !important;
+  border-top-color: #808080 !important;
 }
-@mixin cell-checked
-{
-	pointer-events: none
-
+@mixin cell-checked {
+  pointer-events: none;
 }
 
 /*styling start*/
-body{
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,6 +41,7 @@ body{
   height: 100vh;
   background-color: #e9e9e9;
 }
+
 .container {
   @include button-out;
   // @include shadow;
@@ -53,33 +50,30 @@ body{
   display: flex;
   flex-wrap: wrap;
   // background-color: antiquewhite;
-  
 }
-.start{
+.start {
   @include button-out;
   @include shadow;
-  height:50px;
+  height: 50px;
   width: 50px;
   font-size: 1.1rem;
   display: flex;
-  margin-bottom:3rem ;
+  margin-bottom: 3rem;
   justify-content: center;
   align-items: center;
-  &:active{
+  &:active {
     @include button-in;
     @include inset-shadow;
   }
-  &>span{
-    transition:all 0.3s ease-out;
+  & > span {
+    transition: all 0.3s ease-out;
   }
-  &:hover>span{
-    
+  &:hover > span {
     transform: scale(1.3);
   }
-  
+
   cursor: pointer;
 }
-
 
 .container div {
   @include button-out;
@@ -88,112 +82,106 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover{
+  &:hover {
     @include button-in;
     // border:none;
   }
-  transition:all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 600;
-  &[data="1"]{
-    color:purple;
+  &[data="1"] {
+    color: purple;
   }
-  &[data="2"]{
-    color:green;
+  &[data="2"] {
+    color: green;
   }
-  &[data="3"]{
-    color:red;
+  &[data="3"] {
+    color: red;
   }
-  &[data="5"]{
-    color:brown;
+  &[data="5"] {
+    color: brown;
   }
-  &[data="6"]{
-    color:blue;
+  &[data="6"] {
+    color: blue;
   }
-  &[data="7"]{
-    color:orangered;
+  &[data="7"] {
+    color: orangered;
   }
-  &[data="8"]{
-    color:skyblue;
+  &[data="8"] {
+    color: skyblue;
   }
 }
 
-
-
-.checked{
-  @include button-in; 
+.checked {
+  @include button-in;
   pointer-events: none;
-  
 }
 
-.flagDiv{
+.flagDiv {
   @include button-out;
-  margin-top:2rem;
+  margin-top: 2rem;
   // border:2px solid black;
-  padding:0.5rem;
+  padding: 0.5rem;
   color: darkgreen;
   font-weight: 600;
-  
 }
-.bomb{
+.bomb {
   background-color: #808080;
 }
-.gameOver{
+.gameOver {
   position: absolute;
-  top:50%;
-  left:50%;
-  margin:auto;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
   // top:-10px;
   width: 300px;
   height: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(#000,0.8);
-  
+  background-color: rgba(#000, 0.8);
+
   // transition:height 2s ease-in-out;
   transition: width 2s, height 2s;
-  text-align:center;
+  text-align: center;
   border-radius: 1rem;
-  & span{
-    color:white;
+  & span {
+    color: white;
     position: relative;
-    transform:translateY(-300px);
+    transform: translateY(-300px);
     opacity: 0;
   }
 }
 
-.animate{
-  animation: slideIn 1s ease-in-out 0s forwards;
-    @keyframes slideIn {
-      50%{
-        opacity: 0.5;
-      }
-      100%{
-        transform:translateY(0px);
-        opacity: 1;
-        font-size: 1.5rem;
-      }
+.animate {
+  animation: slideIn 1s ease-in-out 2s forwards;
+  @keyframes slideIn {
+    50% {
+      opacity: 0.5;
     }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+      font-size: 1.5rem;
+    }
+  }
 }
 
-@media (max-width:850px){
-
-  body{
-    height:90vh;
+@media (max-width: 850px) {
+  body {
+    height: 90vh;
     width: 100%;
   }
   .container {
-    
     height: 300px;
     width: 300px;
   }
-  .container div{
+  .container div {
     height: 26px;
-  width: 26px;
+    width: 26px;
   }
-  .gameOver{
+  .gameOver {
     width: 200px;
   }
 }

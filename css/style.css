@@ -129,6 +129,22 @@ body {
   color: red;
 }
 
+.container div[data="5"] {
+  color: brown;
+}
+
+.container div[data="6"] {
+  color: blue;
+}
+
+.container div[data="7"] {
+  color: orangered;
+}
+
+.container div[data="8"] {
+  color: skyblue;
+}
+
 .checked {
   background: #a1adb0 !important;
   border: 2px solid black !important;
@@ -175,8 +191,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
-  -webkit-transition: width 3s, height 3s;
-  transition: width 3s, height 3s;
+  -webkit-transition: width 2s, height 2s;
+  transition: width 2s, height 2s;
   text-align: center;
   border-radius: 1rem;
 }
@@ -190,8 +206,8 @@ body {
 }
 
 .animate {
-  -webkit-animation: slideIn 1.5s ease-in-out 3s forwards;
-          animation: slideIn 1.5s ease-in-out 3s forwards;
+  -webkit-animation: slideIn 1s ease-in-out 2s forwards;
+          animation: slideIn 1s ease-in-out 2s forwards;
 }
 
 @-webkit-keyframes slideIn {
