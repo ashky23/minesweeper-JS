@@ -191,8 +191,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
-  -webkit-transition: width 2s, height 2s;
-  transition: width 2s, height 2s;
+  -webkit-transition: width 1s ease-in, height 1s ease-in;
+  transition: width 1s ease-in, height 1s ease-in;
   text-align: center;
   border-radius: 1rem;
 }
@@ -206,8 +206,8 @@ body {
 }
 
 .animate {
-  -webkit-animation: slideIn 1s ease-in-out 0s forwards;
-          animation: slideIn 1s ease-in-out 0s forwards;
+  -webkit-animation: slideIn 1s ease-in-out 1s forwards;
+          animation: slideIn 1s ease-in-out 1s forwards;
 }
 
 @-webkit-keyframes slideIn {
